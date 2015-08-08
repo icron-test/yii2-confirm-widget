@@ -13,6 +13,6 @@ class ConfirmAsset extends AssetBundle {
 
     public $depends = [
         '\yii\web\JQueryAsset',
-        '\yii\web\BootstrapAsset',
+        '\yii\bootstrap\BootstrapAsset',
     ];
 }

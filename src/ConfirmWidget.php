@@ -12,12 +12,16 @@ class ConfirmWidget extends InputWidget
 
     public $clientEvents = [];
 
+    public $options = [
+        'class' => 'btn btn-lg'
+    ];
+
     public function run()
     {
         if ($this->hasModel()) {
-            $field =  Html::activeFileInput($this->model, $this->attribute, $this->options);
+            $field =  Html::activeTextInput($this->model, $this->attribute, $this->options);
         } else {
-            $field = Html::fileInput($this->name, $this->value, $this->options);
+            $field = Html::textInput($this->name, $this->value, $this->options);
         }
         echo $this->renderTemplate($field);
         $this->registerClientScript();
